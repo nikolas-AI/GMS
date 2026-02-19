@@ -23,7 +23,76 @@ public class Main {
         itemPrices[1] = 0.99;
         itemStocks[1] = 50;
 
-        printInventory(itemNames, itemPrices, itemStocks);
+        
+        /**
+         * Creates a Scanner object to read user input from the console.
+         */
+        Scanner keyboard = new Scanner(System.in);
+
+        /**
+         * Main menu loop.
+         * 
+         * <p>
+         * Continuously displays menu options to the user until the
+         * user chooses to exit the program.
+         * </p>
+         */
+        while (true) {
+
+            // Display menu options
+            System.out.println("Menu:");
+            System.out.println("1. View");
+            System.out.println("2. Restock");
+            System.out.println("3. Exit");
+
+            // Prompt user for menu selection
+            System.out.print("Enter your choice: ");
+            int userChoice = keyboard.nextInt();
+            keyboard.nextLine(); // Consume leftover newline character
+
+            /**
+             * Processes user selection using a switch statement.
+             */
+            switch (userChoice) {
+
+                case 1:
+                    /**
+                     * Displays the current inventory including
+                     * item names, prices, and stock quantities.
+                     */
+                    printInventory(itemNames, itemPrices, itemStocks);
+                    break;
+
+                case 2:
+                    /**
+                     * Prompts user for item name and restock amount,
+                     * then updates the inventory accordingly.
+                     */
+                    System.out.print("Enter item name to restock: ");
+                    String itemName = keyboard.nextLine();
+
+                    System.out.print("Enter amount to restock: ");
+                    int amount = keyboard.nextInt();
+
+                    restockItem(itemNames, itemStocks, itemName, amount);
+                    break;
+
+                case 3:
+                    /**
+                     * Exits the program after closing the Scanner resource.
+                     */
+                    System.out.println("Exiting...");
+                    keyboard.close();
+                    return;
+
+                default:
+                    /**
+                     * Handles invalid menu selections.
+                     */
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        }
+
     }
 
     /**

@@ -1,1 +1,0 @@
-memberSearchIndex = [{"p":"<Unnamed>","c":"GrocerySystem","l":"GrocerySystem()","u":"%3Cinit%3E()","k":"3"},{"p":"<Unnamed>","c":"GrocerySystem","l":"main(String[])","u":"main(java.lang.String[])","k":"6"},{"p":"<Unnamed>","c":"GrocerySystem","l":"printInventory(String[], double[], int[])","u":"printInventory(java.lang.String[],double[],int[])","k":"6"}];updateSearchResults();

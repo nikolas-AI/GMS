@@ -23,15 +23,15 @@ public class Main {
         itemPrices[1] = 0.99;
         itemStocks[1] = 50;
 
-        
-        /**
+    // Creating a scanner item
+    /**
          * Creates a Scanner object to read user input from the console.
          */
         Scanner keyboard = new Scanner(System.in);
 
         /**
          * Main menu loop.
-         * 
+         *
          * <p>
          * Continuously displays menu options to the user until the
          * user chooses to exit the program.
